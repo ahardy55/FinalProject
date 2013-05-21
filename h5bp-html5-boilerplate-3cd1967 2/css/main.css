@@ -298,3 +298,69 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+body {
+    font-family: 'Droid Serif', 'serif';
+
+}
+
+header {
+    height: 90px;
+    width: 100%;
+    background-color: black;
+    padding-top: 45px;
+}
+
+header a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+
+header .left {
+    padding-left: 35px;
+    width: 33%;
+    height: 100%;
+    float: left;
+    letter-spacing: .5em;
+    text-align: center;
+}
+
+header .left span {
+    letter-spacing: 1.5em;
+    list-style: none;
+}
+
+header .right {
+    text-align: center;
+    width: 61%;
+    height: 90px;
+    float: left;
+    padding-left: 35px;
+}
+ 
+header #smallLogIn, #smallSignUp, #searchButton {
+    background: linear-gradient(to bottom, white, black);
+    border: none;
+    color: white;
+    height: 35px;
+    width: 85px;
+    border: 1px solid white;
+}
+
+header #smallSignUp {
+    margin-right: 5px;
+}
+
+header #searchBox {
+    height: 30px;
+}
+
+header .right span {
+    font-size: .5em;
+    margin-left: 75px;
+}
+
+
+
+ 
