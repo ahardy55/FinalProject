@@ -18,7 +18,6 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
     </head>
     <body>
-        <div class = "container">
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -32,22 +31,30 @@
             <input type="search" name="search" id="searchBox" placeholder="Find Your Congressman"> <input type="submit" value="Search" id="searchButton"><br />
             <span><a href="#">OR USE THE DIRECTORY</a></span></div>
      </header>
-     <div class="main">
-        <h1>MY REPRESENATIVE NEWS</h1>
-        <h3>Know What Your Represenative Is Up To</h3>
-        <div class="imageBlock">
-            <img src ="img/capitollinedrawing.jpg">
-            <img src="img/graphclipart.jpg">
-            <img src="img/90percentclipart.jpeg">
-            <img src="img/questionmarkclipart.jpeg"><br \></div>
-            <div class="facts">
-               <span class="members"> 435 Members of Congress</span>
-               <span class="approval">15% Approval Rating</span>
-               <span class="election"> 90% Re-election Rate</span>
-                <span class="problem">Do You See the Problem?</span> 
-                <br></div>
-            <div class="signUp">
-            <a href="#">Sign up now for updates about your represenative</a></div>
+     <div class ="congressman">
+        <img src = "img/CongressmanPhoto1.jpg">
+        Grade Your Congressman
+        <input type="button" value="A" id="gradeA" class="grades">
+        <input type="button" value="B" id="gradeB" class="grades">
+        <input type="button" value="C" id="gradeC" class="grades">
+        <input type="button" value="D" id="gradeD" class="grades">
+        <input type="button" value="F" id="gradeF" class="grades"> <br />
+        Current User Grade: <input type="button" value="" id="user_grade"> <br />
+        Name: John Doe <br>
+        District: NY-05 <br>
+        Party: Whigs  <br>
+        Website: John Doe US Congress<br>
+        E-mail:  Fake@FakeE-mail.com <br>
+        Phone: 123-456-7891 <br>
+        <br>
+        Constituent Comments:
+
+     </div>
+     <div class="googleNews">
+        In the News
+     </div>
+     <div class="twitterAPI">
+        On Twitter
      </div>
      <footer>
         <div class="footerLeft">
@@ -55,8 +62,7 @@
         <a href="https://twitter.com/AdamHardy55"><img src="img/twitter2.png"></a> 
         <a href="https://github.com/ahardy55"><img src="img/github3.png"></a> </div>
         <div class="footerRight">  
-            <a href="ahardy55@gmail.com">coded by Adam Hardy</a></div></footer>
-        </div>
+            <a href="mailto:ahardy55@gmail.com">coded by Adam Hardy</a></div></footer>
     
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>

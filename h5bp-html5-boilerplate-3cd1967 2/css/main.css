@@ -300,15 +300,24 @@ textarea {
 }
 
 body {
-    font-family: 'Droid Serif', 'serif';  
+    font-family: 'Droid Serif', 'serif'; 
+    background-color: white;
+     
+}
+
+.container {
+    background-image: url(../img/ps_neutral.png);
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
 
 header {
-    height: 90px;
-    width: 1220px;
+    height: 120px;
     background-color: black;
-    padding-top: 45px;
+    
 }
 
 header a {
@@ -318,16 +327,18 @@ header a {
 }
 
 .headerLeft {
+    padding-top: 15px;
     padding-left: 35px;
-    width: 33%;
+    width: 32%;
     height: 100%;
     float: left;
-    letter-spacing: .5em;
+    letter-spacing: .4em;
     text-align: center;
+    overflow: hidden;
 }
 
 .headerLeft span {
-    letter-spacing: 1.5em;
+    letter-spacing: 1.6em;
     list-style: none;
 }
 
@@ -336,7 +347,9 @@ header a {
     width: 61%;
     height: 90px;
     float: left;
+    padding-top: 30px;
     padding-left: 35px;
+    overflow: hidden;
 }
  
 #smallLogIn, #smallSignUp, #searchButton {
@@ -363,18 +376,15 @@ header a {
 
 .main {
     height: 510px;
-    width: 1220px;
     border-top: 1px solid black;
-    background-image: url(../img/ps_neutral.png);
     white-space: nowrap;
 }
 
 h1 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.4em;
     letter-spacing: .5em;
     padding-top: 30px;
-
 }
 
 h3 {
@@ -402,17 +412,17 @@ h3 {
 
 .members {
     float: left;
-    padding-left: 155px;
+    padding-left: 50px;
 }
 
 .approval {
     float: left;
-    padding-left: 65px;
+    padding-left: 60px;
 }
 
 .election {
     float: left;
-    padding-left: 80px;
+    padding-left: 75px;
 }
 
 .problem {
@@ -434,7 +444,8 @@ h3 {
 
 footer {
     background-color: #E6E6E6;
-    height: 60px;
+    height: 75px;
+    clear: both;
 }
 
 footer a {
@@ -444,13 +455,50 @@ footer a {
 
 .footerLeft {
     float: left;
-    margin-top: 15px;
+    margin-top: 20px;
     margin-left: 135px;
     letter-spacing: 1em;
 }
 
 .footerRight {
-    margin-top: 15px;
+    margin-top: 20px;
     margin-right: 60px;
     float: right;
 }
+
+.congressman {
+    height: 510px;
+    width: 610px;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    white-space: nowrap;
+    float: left;
+}
+
+.congressman img {
+    height: 180px;
+    width: 150px;
+}
+
+.googleNews {
+    height: 255px;
+    width: 609px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    float: left;
+
+}
+
+.twitterApi {
+    height: 254px;
+    width: 609px;
+    float: left;
+}
+
+
+.selected_grade {
+    background-color: red;
+}
+
+
+
