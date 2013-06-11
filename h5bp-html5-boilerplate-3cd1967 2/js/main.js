@@ -8,3 +8,4 @@ $('.grades').click(function() {
 	var clicked_grade = $(this).val();
 	$('#user_grade').val(clicked_grade); 
 });
+
