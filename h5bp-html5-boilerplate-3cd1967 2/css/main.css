@@ -353,7 +353,7 @@ header a {
 }
  
 #smallLogIn, #smallSignUp, #searchButton {
-    background: linear-gradient(to bottom, white, black);
+    background: linear-gradient(to bottom, gray, black);
     border: none;
     color: white;
     height: 35px;
@@ -404,13 +404,15 @@ h3 {
     width: 150px;
     border-radius: 50%;
     border: 1px solid black;
+    opacity: 0;
     }
 
-.members, .approval, .election, .problem {
+#members, .approval, .election, .problem {
     margin-top: 15px;
+    color: transparent;
 }
 
-.members {
+#members {
     float: left;
     padding-left: 50px;
 }
@@ -487,12 +489,24 @@ footer a {
     float: right;
 }
 
+.grades {
+    height: 30px;
+    width: 30px;
+    background: linear-gradient(to bottom, gray, black);
+    border: none;
+    color: white;
+    border: 1px solid white;
+}
 
+#gradeB:hover, #gradeA:hover, #gradeC:hover, #gradeD:hover, #gradeF:hover {
+    height: 45px;
+    width: 45px;
 
+}
 
 
 .selected_grade {
-    background-color: red;
+    color: red;
 }
 
 
