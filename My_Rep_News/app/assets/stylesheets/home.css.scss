@@ -1,3 +1,69 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+h1 {
+    text-align: center;
+    font-size: 2.4em;
+    letter-spacing: .5em;
+    padding-top: 30px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: -25px
+}
+
+.imageBlock {
+    height: 150px;
+    margin-top: 50px;
+    text-align: center;
+    padding-left: 55px;
+    text-align: center;
+    letter-spacing: 4.5em;
+}
+
+#capitol, #graph, #nintypercent, #questionmark{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 1px solid black;
+    opacity: 0;
+    }
+/*font color is transparent. Animated to black on page load with jquery */
+#members, .approval, .election, .problem {
+    margin-top: 15px;
+    color: transparent;
+}
+
+#members {
+    float: left;
+    padding-left: 50px;
+}
+
+.approval {
+    float: left;
+    padding-left: 60px;
+}
+
+.election {
+    float: left;
+    padding-left: 75px;
+}
+
+.problem {
+    float: left;
+    padding-left: 60px;
+}
+
+.signUp {
+    clear: both;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 70px;
+}
+
+.signUp a {
+    text-decoration: underline;
+    color: black;
+}

@@ -12,7 +12,14 @@
 //
 //= require jquery
 //= require jquery_ujs
+// = require plugins.js
+//= require jquery-1.9.0.min
+//= require jquery.color-2.1.2.min
+//= require modernizr-2.6.2.min
 //= require_tree .
+
+
+
 
 $('.grades').click(function() { 
 
@@ -25,8 +32,10 @@ $('.grades').click(function() {
 	$('#user_grade').val(clicked_grade); 
 });
 
+//fading in text.  Each bit of text fades from transparent to black after
+//2 seconds
 $(document).ready(function() {
-  $('#members').animate({ color: 'black',
+  $('.members').animate({ color: 'black',
   }, 2000, function() { $('.approval').animate({ color: 'black',
   }, 2000, function() {$('.election').animate({ color: 'black',
   }, 2000, function() {$('.problem').animate({ color: 'black',
@@ -37,6 +46,7 @@ $(document).ready(function() {
   });
 });
 
+//animating images to fade in on page load, each one 2 seconds after the last
 $(document).ready(function() {
   $('#capitol').animate({ opacity: '1',
   }, 2000, function() { $('#graph').animate({ opacity: '1',

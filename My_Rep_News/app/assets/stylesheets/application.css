@@ -1,3 +1,5 @@
+
+
 *
  * HTML5 Boilerplate
  *
@@ -358,7 +360,7 @@ span a {
     overflow: hidden;
 }
  
-#smallLogIn, #smallSignUp, #searchButton {
+.button {
     background: linear-gradient(to bottom, gray, black);
     border: none;
     color: white;
@@ -414,8 +416,8 @@ h3 {
     border: 1px solid black;
     opacity: 0;
     }
-
-#members, .approval, .election, .problem {
+/*font color is transparent. Animated to black on page load with jquery */
+.members, .approval, .election, .problem {
     margin-top: 15px;
     color: transparent;
 }
@@ -427,17 +429,17 @@ h3 {
 
 .approval {
     float: left;
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 .election {
     float: left;
-    padding-left: 75px;
+    padding-left: 70px;
 }
 
 .problem {
     float: left;
-    padding-left: 60px;
+    padding-left: 50px;
 }
 
 .signUp {
@@ -516,4 +518,22 @@ footer a {
 .selected_grade {
     color: red;
 }
+
+.signUpPage {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.signUpPage span {
+    font-size: 1.2em; 
+}
+
+.logInPage {
+    text-align: center;
+}
+
+.logInPage span {
+    font-size: 1.2em;
+}
+
 
