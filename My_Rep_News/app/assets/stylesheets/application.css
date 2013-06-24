@@ -1,5 +1,4 @@
 
-
 *
  * HTML5 Boilerplate
  *
@@ -422,7 +421,7 @@ h3 {
     color: transparent;
 }
 
-#members {
+.members {
     float: left;
     padding-left: 50px;
 }

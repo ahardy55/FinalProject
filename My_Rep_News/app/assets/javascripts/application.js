@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-// = require plugins.js
 //= require jquery-1.9.0.min
 //= require jquery.color-2.1.2.min
 //= require modernizr-2.6.2.min
@@ -34,6 +33,7 @@ $('.grades').click(function() {
 
 //fading in text.  Each bit of text fades from transparent to black after
 //2 seconds
+
 $(document).ready(function() {
   $('.members').animate({ color: 'black',
   }, 2000, function() { $('.approval').animate({ color: 'black',
