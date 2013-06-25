@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-1.9.0.min
 //= require jquery.color-2.1.2.min
 //= require modernizr-2.6.2.min
 //= require_tree .
@@ -35,10 +34,16 @@ $('.grades').click(function() {
 //2 seconds
 
 $(document).ready(function() {
-  $('.members').animate({ color: 'black',
-  }, 2000, function() { $('.approval').animate({ color: 'black',
-  }, 2000, function() {$('.election').animate({ color: 'black',
-  }, 2000, function() {$('.problem').animate({ color: 'black',
+  $('.members').animate({ 
+    opacity: '1',
+  }, 2000, function() { 
+    $('.approval').animate({ 
+      opacity: '1',
+  }, 2000, function() {
+    $('.election').animate({ 
+      opacity: '1',
+  }, 2000, function() {
+    $('.problem').animate({ opacity: '1',
   }, 2000, function() {
   });
   });
@@ -48,8 +53,11 @@ $(document).ready(function() {
 
 //animating images to fade in on page load, each one 2 seconds after the last
 $(document).ready(function() {
-  $('#capitol').animate({ opacity: '1',
-  }, 2000, function() { $('#graph').animate({ opacity: '1',
+  $('#capitol').animate({ 
+    opacity: '1',
+  }, 2000, function() { 
+    $('#graph').animate({ 
+      opacity: '1',
   }, 2000, function() {$('#nintypercent').animate({ opacity: '1',
   }, 2000, function() {$('#questionmark').animate({ opacity: '1',
   }, 2000, function() {

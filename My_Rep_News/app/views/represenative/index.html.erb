@@ -1,6 +1,31 @@
-First Name: <%= @representative.first_name %><br />
+<div class="congressman">
+  <input type="button" value="A" id="gradeA" class="grades">
+  <input type="button" value="B" id="gradeB" class="grades">
+  <input type="button" value="C" id="gradeC" class="grades">
+  <input type="button" value="D" id="gradeD" class="grades">
+  <input type="button" value="F" id="gradeF" class="grades"> <br />
+  <input type="button" value="" id="user_grade"> 
+  <div class="photo">
+  	<%= image_tag "congressmenimages/#{@representative.bioguide_id}.jpg" %>
+  </div>
+  First Name: <%= @representative.first_name %><br />
   Last Name: <%= @representative.last_name %><br />
-  Chamber: <%= @representative.chamber %><br />
-  Website : <%= @representative.website %><br />
+  Chamber: <%= @representative.chamber.capitalize %><br />
+  Website : <a href=<%= @representative.website %>><%= @representative.website %></a><br />
   Twitter: http://www.twitter.com/<%= @representative.twitter_id %><br />
   You Tube: http://www.youtube.com/<%= @representative.youtube_id %><br />
+
+Current grade: <%= @grade.grade %>
+<br />
+ <%= form_for Grade.new do |f| %>
+   <%= f.hidden_field :user_id, value: current_user.id %>
+   <%= f.hidden_field :bioguide_id, value: @representative.bioguide_id %>
+   <%= f.text_field :grade %>
+   <%= f.button %>
+ <% end %>
+ </div>
+        <div class="recentVotes">Recent House Votes
+        <%= @votes %>
+        </div>
+        <div class="userComments">Sound off!</div>
+<br />

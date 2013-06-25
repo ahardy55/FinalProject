@@ -368,6 +368,11 @@ span a {
     border: 1px solid white;
 }
 
+.logOut {
+    float: left;
+    padding-left: 80px;
+}
+
 #smallSignUp {
     margin-right: 5px;
 }
@@ -415,10 +420,10 @@ h3 {
     border: 1px solid black;
     opacity: 0;
     }
-/*font color is transparent. Animated to black on page load with jquery */
+/*opacity is set to zero, fades in with load with jquery */
 .members, .approval, .election, .problem {
     margin-top: 15px;
-    color: transparent;
+    opacity: 0;
 }
 
 .members {
@@ -513,7 +518,6 @@ footer a {
 
 }
 
-
 .selected_grade {
     color: red;
 }
@@ -521,10 +525,13 @@ footer a {
 .signUpPage {
     text-align: center;
     padding-top: 15px;
+    height: inherit;
+    overflow: scroll;
 }
 
 .signUpPage span {
-    font-size: 1.2em; 
+    font-size: 1.2em;
+
 }
 
 .logInPage {
@@ -534,5 +541,6 @@ footer a {
 .logInPage span {
     font-size: 1.2em;
 }
+
 
 

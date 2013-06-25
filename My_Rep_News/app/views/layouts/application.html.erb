@@ -21,11 +21,18 @@
 
         <!-- Add your site or application content here -->
   <header>
-    <div class = "headerLeft"><a href="/home">MY REPRESENATIVE <br \>
+    <div class = "headerLeft">
+      <a href="/home">MY REPRESENATIVE <br \>
       <span>NEWS</span></a>
     </div>
-      <a href="/log_in"><div class = "headerRight"><input type="button" value="Log In" class="button"></a>
-      <a href="/sign_up"><input type="button" value="Sign Up" class="button"></a>
+    <div class = "headerRight">
+      <% if current_user %>
+        <div class="logOut">
+          <%=button_to "Log Out", log_out_path, :class => 'button'%></div>
+      <% else %>
+        <a href="/log_in"><input type="button" value="Log In" class="button"></a>
+        <a href="/sign_up"><input type="button" value="Sign Up" class="button"></a>
+      <% end %>
       <input type="search" name="search" id="searchBox" placeholder="Find Your Congressman"> 
       <input type="submit" value="Search" class="button"><br />
       <span><a href="#">OR USE THE DIRECTORY</a></span></div>
