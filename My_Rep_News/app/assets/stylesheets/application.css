@@ -468,7 +468,14 @@ h3 {
 .recentVotes {
     height: 50%;
     width: 51.6%;
-    overflow: scroll;
+    overflow-y: scroll;
+    white-space: normal;
+    padding-right: 3px;
+}
+
+.recentVotes span {
+    margin-left: 27%;
+    font-size: 1.2em;
 }
 
 .userComments {

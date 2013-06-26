@@ -7,6 +7,6 @@ class RepresenativeController < ApplicationController
   	@representative = legislators.select { |leg| leg.chamber == "house" }[0]
   
   	@grade = Grade.find_by_user_id_and_bioguide_id(current_user.id, @representative.bioguide_id)
-  	@votes = Congress.votes
+  	@votes = Congress.votes["results"]
   end
 end
