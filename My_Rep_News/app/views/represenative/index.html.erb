@@ -15,7 +15,7 @@
   Twitter: http://www.twitter.com/<%= @representative.twitter_id %><br />
   You Tube: http://www.youtube.com/<%= @representative.youtube_id %><br />
 
-Current grade: <%= @grade.grade %>
+Current grade: <%= @grade.try(:grade) %>
 <br />
  <%= form_for Grade.new do |f| %>
    <%= f.hidden_field :user_id, value: current_user.id %>
@@ -23,16 +23,17 @@ Current grade: <%= @grade.grade %>
    <%= f.text_field :grade %>
    <%= f.button %>
  <% end %>
- <%= @current_user.email %>
  </div>
   <div class="recentVotes">
    <span> Recent House Votes </span><br \><br \>
     <% @votes.each do |f| %>
-      <em>Bill ID:</em> <a href=<%= f.source %>><%= f.bill_id %></a><br \>
-      <em>Description:</em> <%= f.question %> <br \>
-      <em>Result:</em> <%= f.result %><br \>
+      <em><u>Bill ID</u>:</em> <a href=<%= f.source %>><%= f.bill_id %></a><br \>
+      <em><u>Description</u>:</em> <%= f.question %> <br \>
+      <em><u>Result</u>:</em> <%= f.result %><br \>
       <br \>
     <% end %>
   </div>
-  <div class="userComments">Sound off!</div>
+  <div class="userComments"><span>Sound off!</span><br \> <br \>
+
+  </div>
 <br />

@@ -27,8 +27,8 @@
     </div>
     <div class = "headerRight">
       <% if current_user %>
-        <div class="logOut">
-          <%=button_to "Log Out", log_out_path, :class => 'button'%></div>
+          <%=button_to "Log Out", log_out_path, :class => 'button', :id => 'logout'%>
+          <a href="/represenative/index"><input type="button" value="Your Rep" class="button" id="yourRep"></a>
       <% else %>
         <a href="/log_in"><input type="button" value="Log In" class="button"></a>
         <a href="/sign_up"><input type="button" value="Sign Up" class="button"></a>

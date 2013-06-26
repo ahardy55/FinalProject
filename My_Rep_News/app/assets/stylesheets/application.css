@@ -368,11 +368,13 @@ span a {
     border: 1px solid white;
 }
 
-.logOut {
+#logout, #yourRep {
     float: left;
-    padding-left: 80px;
 }
 
+.loggedIn {
+    padding-right: -100px;
+}
 #smallSignUp {
     margin-right: 5px;
 }
@@ -474,14 +476,22 @@ h3 {
 }
 
 .recentVotes span {
-    margin-left: 27%;
+    margin-left: 150px;
+    font-size: 1.2em;
+}
+
+.userComments span {
+    margin-left: 200px;
     font-size: 1.2em;
 }
 
 .userComments {
     height: 49.6%;
     width: 51.5%;
-    overflow: scroll;
+    overflow-y: scroll;
+    white-space: normal;
+    padding-right: 3px;
+    border-top: 1px solid black;
 
 }
 

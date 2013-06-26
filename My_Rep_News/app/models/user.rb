@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :zip
-
+  has_many :microposts
   attr_accessor :password
   before_save :encrypt_password
 
