@@ -11,11 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626200405) do
+ActiveRecord::Schema.define(:version => 20130626213013) do
 
+  
 
   create_table "grades", :force => true do |t|
-    t.integer  "user_id"
     t.string   "bioguide_id"
     t.integer  "grade"
     t.datetime "created_at",  :null => false
@@ -27,15 +27,15 @@ ActiveRecord::Schema.define(:version => 20130626200405) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "microposts", :force => true do |t|
-    t.string   "content"
+
+  create_table "repcomments", :force => true do |t|
     t.integer  "user_id"
     t.string   "bioguide_id"
+    t.string   "repcomment"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "microposts", ["user_id", "created_at"], :name => "index_microposts_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "email"

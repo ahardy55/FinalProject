@@ -1,0 +1,8 @@
+<div class="directory">
+<% @all_representatives.sort { |a,b| a.last_name <=> b.last_name }.each do |rep| %>
+<%= "#{rep.first_name} #{rep.last_name}" %>: 
+<a href=rep.website><%= rep.website %></a>
+<br \><br \>
+<% end %>
+</div>
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bioguide_id: MyString
+  user_id: 1
+  comment: MyString
+
+two:
+  bioguide_id: MyString
+  user_id: 1
+  comment: MyString

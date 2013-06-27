@@ -1,0 +1,13 @@
+<div class="searchPage">
+<% if @representatives.size > 0 %>
+<% @representatives.each do |rep| %>
+<%= "#{rep.first_name} #{rep.last_name}"%>: 
+<a href=rep.website><%= rep.website %></a>
+<br /><br \>
+<% end %>
+
+<% else %>
+No results
+
+<% end %>
+</div>

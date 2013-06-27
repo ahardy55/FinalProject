@@ -1,28 +1,20 @@
 <div class="congressman">
-  <input type="button" value="A" id="gradeA" class="grades">
-  <input type="button" value="B" id="gradeB" class="grades">
-  <input type="button" value="C" id="gradeC" class="grades">
-  <input type="button" value="D" id="gradeD" class="grades">
-  <input type="button" value="F" id="gradeF" class="grades"> <br />
-  <input type="button" value="" id="user_grade"> 
-  <div class="photo">
-  	<%= image_tag "congressmenimages/#{@representative.bioguide_id}.jpg" %>
-  </div>
+  
+  <div class="represenativeInfo">
+    <span>Your Congressman Is <%= @representative.first_name %> <%=@representative.last_name %></span> </br>
+  	<%= image_tag "congressmenimages/#{@representative.bioguide_id}.jpg", :id => 'portrait' %> <br \>
   First Name: <%= @representative.first_name %><br />
   Last Name: <%= @representative.last_name %><br />
-  Chamber: <%= @representative.chamber.capitalize %><br />
+  Party: <%= @representative.party %><br />
+  State: <%= @representative.state_name %><br \>
+  District: <%= @representative.district %><br \>
+  Phone: <%= @representative.phone %><br \>
+  Office: <%= @representative.office %><br \>
   Website : <a href=<%= @representative.website %>><%= @representative.website %></a><br />
-  Twitter: http://www.twitter.com/<%= @representative.twitter_id %><br />
-  You Tube: http://www.youtube.com/<%= @representative.youtube_id %><br />
+  Birthday: <%= @representative.birthday %>
+  </div>
+  
 
-Current grade: <%= @grade.try(:grade) %>
-<br />
- <%= form_for Grade.new do |f| %>
-   <%= f.hidden_field :user_id, value: current_user.id %>
-   <%= f.hidden_field :bioguide_id, value: @representative.bioguide_id %>
-   <%= f.text_field :grade %>
-   <%= f.button %>
- <% end %>
  </div>
   <div class="recentVotes">
    <span> Recent House Votes </span><br \><br \>
@@ -34,6 +26,15 @@ Current grade: <%= @grade.try(:grade) %>
     <% end %>
   </div>
   <div class="userComments"><span>Sound off!</span><br \> <br \>
+    <ul>
+      <% @repcomments.each do |repcomment| %>
+        <li><%= "#{repcomment.repcomment} -- #{@current_user.email}" %><br \>
+      <% end %>
+    <div class="postButtom"><%= form_for Repcomment.new do |f| %>
+     <%= f.hidden_field :bioguide_id, value: @representative.bioguide_id %>
+     <%= f.text_field :repcomment %>
+     <%= f.button "Post", :class => "button" %></div>
+    <% end %>
 
   </div>
 <br />

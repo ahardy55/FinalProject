@@ -1,9 +1,15 @@
 MyRepNews::Application.routes.draw do
  
+
+  get "directory/index"
+  get "directory/search"
+
   get "represenative/index"
 
   resources :represenatives
   resources :grades, only: [:create, :update]
+  resources :repcomments, only:[:create, :update]
+
 
 
   post "log_out" => "sessions#destroy", :as => "log_out"
